@@ -1,0 +1,46 @@
+<html lang="en-us">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+    <title>Chart 1</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.js"></script>
+    <script async type="text/javascript" src="bundle.js"></script>
+    <style>
+        body {
+            font-family: 'Arial'
+        }
+
+        .grd_tt2 {
+            height: 35px;
+            padding-right: 10px;
+            padding-left: 10px;
+            background-image: linear-gradient(#00357a, #02005e);
+            color: white;
+            font-size: 14px;
+            line-height: 30px;
+            font-weight: 700;
+            overflow-x: hidden;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <!--<button id="cc_DrawAnotherData_button">draw different data on the chart</button>-->
+    <br>
+    
+    <div id="cc_Chart" style="width: 1000px; height: 600px;"></div>
+
+    <script>
+        $(document).ready(function ()
+        {
+            $("#cc_DrawAnotherData_button").click(function () 
+            {
+                window.postMessage({ header: 'TUData', data: '' }, '*');
+            });
+        });
+    </script>
+</body>
+
+</html>
